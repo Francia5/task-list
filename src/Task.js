@@ -27,16 +27,13 @@ class Task extends React.Component {
 
     }
 
-    handleCancel(e) {
-        e.preventDefault();
+    handleCancel() {
         this.setState({ editing: false });
     }
 
-    handleEdit(e) {
-        e.preventDefault();
+    handleEdit() {
         this.props.onEdit(this.state.text, this.props.id);
         this.setState({ editing: false });
-        console.log("holi2");
 
     }
 
@@ -46,7 +43,6 @@ class Task extends React.Component {
 
     componentDidUpdate() {
         if (this.state.editing) {
-            console.log('updating');
             this.inputRef.current.focus();
         }
     }
