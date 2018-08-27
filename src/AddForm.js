@@ -36,6 +36,8 @@ class AddForm extends React.Component {
     handleClick(e) {
         /* The value is stored in this.state.value, do something with it*/
         this.props.saveForm(this.state.value);
+        this.setState({ value: "" });
+
     }
 
     handleKeyUp(e) {

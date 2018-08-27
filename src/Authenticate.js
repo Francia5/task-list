@@ -1,5 +1,6 @@
-import React from 'react';
 import firebase from 'firebase';
+import React from 'react';
+
 
 
 class Authenticate extends React.Component {
@@ -48,12 +49,12 @@ class Authenticate extends React.Component {
         return (
             <form className="container-fluid col-sm-12 col-lg-4 mt-4 ">
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label htmlFor="exampleInputEmail1">Email address</label>
                     <input value={this.state.mail} onChange={this.handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label htmlFor="exampleInputPassword1">Password</label>
                     <input value={this.state.password} onChange={this.handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
                     <button onClick={this.handleCreateUser} type="button" className="btn btn-primary m-4">New User</button>
